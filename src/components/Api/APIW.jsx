@@ -9,8 +9,8 @@ async function APIW() {
 
     data.list.map((day) => {
       days.push({
-        date: day.dt_txt.slice(5, 10),
-        time: day.dt_txt.slice(11, 16),
+        date: day.slice(5, 10),
+        time: day.slice(11, 16),
         wind: day.wind.speed,
         dayTemp: day.main.temp_max,
         nightTemp: day.main.temp_min,

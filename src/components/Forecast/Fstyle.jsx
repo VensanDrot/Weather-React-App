@@ -14,35 +14,33 @@ align-items:center;
 justify-content:center;
 `
 
-export const maincontainer = styled.div`
-    display:grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-    text-align:center;
-    position:relative;
-    height:80%;  
-   
-    `
-
 export const h1= styled.h1`
     text-align:center;
     font-size:1.7rem;
     color:#fff;
 `
 
+export const maincontainer = styled.div`
+    display:grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    text-align:center;
+    position:relative;
+    height:75%;  
+   `
+
 
 export const day_cont = styled.div`
     display:grid;
-    
     grid-template-rows: 25% 40% 25%; 
     border: 1px solid transperent;
     border-radius: 1.5rem;
-    row-gap: 5%;
+    row-gap: 3%;
     width:130px;
     color:#ffffff;
     position:relative;
     transition: 0.3s;
     &:hover {
-        background: #aaccee;
+        background: #474343;
       }
 `
 
