@@ -1,54 +1,55 @@
 import styled from "styled-components";
+import { theme } from "../style";
 
+// 
 
-export const container = styled.div`
-background: rgb(15, 14, 14);
-border: 1px solid transperent;
-border-radius: 1.5rem;
-height: 750px;
-width: 750px;
-margin: 3rem auto;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-`
+export const MainContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
 
-export const h1= styled.h1`
-    text-align:center;
-    font-size:1.7rem;
-    color:#fff;
-`
-
-export const maincontainer = styled.div`
-    display:grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-    text-align:center;
-    position:relative;
-    height:75%;  
-   `
-
-
-export const day_cont = styled.div`
-    display:grid;
-    grid-template-rows: 25% 40% 25%; 
-    border: 1px solid transperent;
-    border-radius: 1.5rem;
-    row-gap: 3%;
-    width:130px;
-    color:#ffffff;
-    position:relative;
-    transition: 0.3s;
-    &:hover {
-        background: #474343;
-      }
-`
-
-export const p = styled.p`
-background: #ff00aa;
-width:85%;
-margin-left: 7.5%;
-display:flex;
-align-items:center;
-justify-content:center;
-`
+export const EachDay = styled.div`
+  border-radius: ${theme.sizes.borderRadius};
+  width: ${theme.sizes.containers.medium};
+  text-align: center;
+  transition: 0.3s;
+  &:hover {
+    background-color: ${theme.colors.hover};
+  }
+  @media (max-width: ${theme.sizes.resolutions.tablet}) {
+    width: ${theme.sizes.containers.small};
+  }
+`;
+export const Label = styled.p`
+  padding: ${theme.sizes.space.none};
+  font-size: ${theme.sizes.font.big};
+  @media (max-width: ${theme.sizes.resolutions.tablet}) {
+    font-size: ${theme.sizes.font.medium};
+  }
+  @media (max-width: ${theme.sizes.resolutions.mobile}) {
+    font-size: ${theme.sizes.font.small};
+  }
+`;
+export const Description = styled.p`
+  padding: ${theme.sizes.space.none};
+  margin-top: ${theme.sizes.space.none};
+  font-size: ${theme.sizes.font.medium};
+  @media (max-width: ${theme.sizes.resolutions.tablet}) {
+    font-size: ${theme.sizes.font.small};
+  }
+`;
+export const GraphSpace = styled.div`
+  margin: ${theme.sizes.space.bigNoSides};
+  height: ${theme.sizes.containers.extrasmall};
+`;
+export const Images = styled.img`
+  margin: ${theme.sizes.space.smallNoSides};
+  width: ${theme.sizes.containers.extrasmall};
+`;
+export const WindImage = styled.img`
+  filter:invert(0.6);
+  margin: ${theme.sizes.space.none};
+  width: ${theme.sizes.containers.textSize};
+  `

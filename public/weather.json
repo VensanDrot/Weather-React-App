@@ -1,34 +1,54 @@
-import { DateTime } from 'luxon';
-const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=41&lon=69&appid=63af4b12863f964b7dd0c84b2c1ef94a&units=metric&cnt=5';
+export const container = styled.div `
+background: rgb(15, 14, 14);
+border: 1px solid transperent;
+border-radius: 1.5rem;
+height: 750px;
+width: 750px;
+margin: 3rem auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+`
 
-const weatherApi = () => {
+export const h1 = styled.h1 `
+    text-align:center;
+    font-size:1.7rem;
+    color:#fff;
+`
 
-    return fetch(url)
-        .then((res) => res.json())
-
-}
-
-const FTLT = (secs, zone, form = "cccc, dd LLL yyyy' | Local time: 'hh:mm a") => DateTime.fromSeconds(secs).setZone(zone).toFormat(form);
-
-
-const formatweather = (data) => {
-    let { timezone, hourly } = data;
-
-    hourly = hourly.map((d) => {
-        return {
-            title: FTLT(d.dt, timezone, "hh:mm a"),
-            temp: d.temp,
-            icon: d.weather[0].icon,
-        };
-    });
-    return { timezone, hourly };
-}
+export const maincontainer = styled.div `
+    display:grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    text-align:center;
+    position:relative;
+    height:75%;  
+   `
 
 
-const getFromatedWeather = async() => {
-    const fweather = await weatherApi()
-        .then(formatweather);
-    return fweather;
-}
+export const day_cont = styled.div `
+    display:flex;
+    flex-direction: column;
+    border: 1px solid transperent;
+    border-radius: 1.5rem;
+    width:130px;
+    color:#ffffff;
+    position:relative;
+    transition: 0.3s;
+    &:hover {
+        background: #474343;
+      }
+`
 
-export default getFromatedWeather;
+export const p = styled.p `
+background: #ff00aa;
+width:85%;
+margin-left: 7.5%;
+display:flex;
+align-items:center;
+justify-content:center;
+`
+
+<
+S.GraphSpace ref = { childRef } > < /S.GraphSpace> <
+    S.GraphSpace > < /S.GraphSpace>
