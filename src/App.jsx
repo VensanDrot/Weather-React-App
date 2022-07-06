@@ -7,7 +7,7 @@ function App() {
        <>
        <Style.GlobalStyle />
       <Style.StyledApp>
-        <Style.Header>Прогноз на целый день по 3 часа </Style.Header>
+        <Style.Header>Прогноз на целый день. Ташкент</Style.Header>
         <Forecast  />
       </Style.StyledApp>
        </>

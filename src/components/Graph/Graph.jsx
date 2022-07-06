@@ -23,7 +23,7 @@ function Graph(ContainerInfo, fromTop, positioning) {
     y2: 70,
   };
    
-  console.log(temperatureData.x2);
+  //console.log(temperatureData.x2);
   return (
     <S.GraphImg top={ContainerInfo.fromTop}>
     {ContainerInfo.temperature.map((each, key) => {
