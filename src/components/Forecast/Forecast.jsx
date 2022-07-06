@@ -70,14 +70,14 @@ return (
           <Graph
             ContainerInfo={containerData}
             temperature={days.map((day) => day.dayTemp)}
-            fromTop="30%"
+            fromTop="35%"
             positioning="dayTime"
           />
           {/* for nightTime */}
           <Graph
             ContainerInfo={containerData}
             temperature={days.map((day) => day.nightTemp)}
-            fromTop="55%"
+            fromTop="60%"
             positioning={undefined}
           />
         </>
