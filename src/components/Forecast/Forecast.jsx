@@ -6,6 +6,7 @@ import clouds from '../svg/cloudy-day-3.svg'
 import cloudwithrain from '../svg/rainy-6.svg'
 import moon from '../svg/night.svg'
 import wind from '../svg/wind-svgrepo-com.svg'
+import snow from '../svg/snowy-6.svg'
 import Graph from '../Graph/Graph'
 
 
@@ -15,7 +16,7 @@ const Forecast = () => {
   
   const divRef = useRef();
   const childRef = useRef();
-  const [containerData, setcontainerData] = useState([]);
+  const [containerData, setcontainerData] = useState({});
   const [days, setDays] = useState([]);
   useEffect(() => {
     APIW().then((data) => {
@@ -37,9 +38,14 @@ const Forecast = () => {
         widthOfContainers: WidthOfChild,
         heightOfContainers: heightOfChild,
       });
+      console.log = console.warn = console.error = () => {};
+      //console.log(divRef);
+      //console.log(divRef.current);
+      //console.log(childRef);
+      //console.log(childRef.current);
       
     }
-  }, [days.length]);
+  }, [containerData,days.length]);
 
   //console.log(containerData);
 
@@ -47,6 +53,8 @@ const Forecast = () => {
     switch (weather) {
       case "Clear":
         return sun;
+      case "Snowy":
+        return snow;
       case "Clouds":
         return clouds;
       case "Rain":
@@ -70,14 +78,14 @@ return (
           <Graph
             ContainerInfo={containerData}
             temperature={days.map((day) => day.dayTemp)}
-            fromTop="35%"
+            fromTop="30%"
             positioning="dayTime"
           />
           {/* for nightTime */}
           <Graph
             ContainerInfo={containerData}
             temperature={days.map((day) => day.nightTemp)}
-            fromTop="60%"
+            fromTop="55%"
             positioning={undefined}
           />
         </>

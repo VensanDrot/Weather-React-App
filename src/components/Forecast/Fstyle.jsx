@@ -45,8 +45,11 @@ export const GraphSpace = styled.div`
   height: ${theme.sizes.containers.extrasmall};
 `;
 export const Images = styled.img`
-  margin: ${theme.sizes.space.smallNoSides};
-  width: ${theme.sizes.containers.extrasmall};
+  margin: 0.5rem 0;
+  width: 66px;
+  @media (max-width: ${theme.sizes.resolutions.mobile}) {
+    width: 40px;
+  }
 `;
 export const WindImage = styled.img`
   filter:invert(0.6);

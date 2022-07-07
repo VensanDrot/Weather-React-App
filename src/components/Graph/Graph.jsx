@@ -52,7 +52,7 @@ function Graph(ContainerInfo, fromTop, positioning) {
             x={temperatureData.x2}
             //correcting a place to put temp
             y={
-              positioning ? temperatureData.y2 - 15 : temperatureData.y2 + 25
+              ContainerInfo.positioning ? temperatureData.y2 - 15 : temperatureData.y2 + 25
             }
           >
           

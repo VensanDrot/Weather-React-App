@@ -17,14 +17,14 @@ export const theme = {
         big: "750px",
         medium: "130px",
         small: "70px",
-        extrasmall: "66px",
+        extrasmall: "33px",
         textSize: "20px",
       },
       space: {
         none: "0px",
         smallNoSides: "1rem 0",
         mediumNoSides: "3rem auto",
-        bigNoSides: "2.2rem 0",
+        bigNoSides: "4.4rem 0",
       },
       resolutions: {
         mobile: "400px",
